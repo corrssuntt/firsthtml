@@ -1,0 +1,69 @@
+body {
+  background-color: #dddad5;
+}
+h1 {
+  color: #4d516d;
+}
+p {
+  color: #01162b;
+}
+<style>
+a:link {
+  color: #4d516d;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4d516d;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a8868c;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #01162b;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+/* Basic reset and image styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    /* This creates responsive columns that auto-fit, with a minimum width of 150px and max of 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 10px; /* Space between images */
+}
+
+.gallery-item img {
+    width: 100%; /* Images take the full width of their container */
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures images cover the area without stretching, cropping as needed */
+    display: block; /* Helps prevent whitespace issues */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+/* Optional: Add a hover effect */
+.gallery-item img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Media queries for different screen sizes can further optimize the display, 
+   for example, adjusting the minimum column width as needed. */
